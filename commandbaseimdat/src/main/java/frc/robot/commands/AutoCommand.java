@@ -23,10 +23,16 @@ public class AutoCommand extends CommandBase{
 
     @Override
     public void execute() {
-  while (timer.get() < 4){
+  if (timer.get() < 4){
   driveSubsystem.Drive(1, 1);
+  
+ }else{
+   driveSubsystem.Drive(0, 0);
+
  }
+
  }
+
 
     @Override
     public boolean isFinished() {
